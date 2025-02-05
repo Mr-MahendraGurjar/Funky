@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "389595322182",
+    "project_id": "skenu-44276",
+    "storage_bucket": "skenu-44276.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389595322182:android:fa90aa094788349260b747",
+        "android_client_info": {
+          "package_name": "com.example.snkenu_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhluErZAJ0XNZbBkmOiYJpFac9ZbR6_Oo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389595322182:android:cd80fcf5d3b134ab60b747",
+        "android_client_info": {
+          "package_name": "com.funky.funky_new"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhluErZAJ0XNZbBkmOiYJpFac9ZbR6_Oo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

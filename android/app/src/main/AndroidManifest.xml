@@ -1,0 +1,81 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.funky.funky_new">
+    <!-- The Agora SDK requires permissions -->
+    <uses-permission  android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission  android:name="android.permission.INTERNET"  />
+    <uses-permission  android:name="android.permission.RECORD_AUDIO"  />
+    <uses-permission  android:name="android.permission.CAMERA"  />
+    <uses-permission  android:name="android.permission.MODIFY_AUDIO_SETTINGS"  />
+    <uses-permission  android:name="android.permission.ACCESS_NETWORK_STATE"  />
+    <!-- The Agora SDK requires Bluetooth permissions in case users are using Bluetooth devices.-->
+    <uses-permission  android:name="android.permission.BLUETOOTH"  />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION"/>
+    <!-- <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" tools:replace="android:maxSdkVersion" android:maxSdkVersion="28"/> -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+    <!-- Required for Android 10 and above if your app needs broad access -->
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+     <!--for bring app to foreground from background in Android 10 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+   <application
+        android:hardwareAccelerated="true"
+        android:label="funky_new"
+        android:name="${applicationName}"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/Theme.AppCompat"
+        android:icon="@mipmap/ic_launcher">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:windowSoftInputMode="adjustResize">
+            <!-- Specifies an Android theme to apply to this Activity as soon as
+                 the Android process has started. This theme is visible to the user
+                 while the Flutter UI initializes. After that, this theme continues
+                 to determine the Window background behind the Flutter UI. -->
+            <meta-data
+              android:name="io.flutter.embedding.android.NormalTheme"
+              android:resource="@style/NormalTheme"
+              />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!--for user dafault notification icon -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/notification_icon" />
+        
+        <!--for user dafault notification icon  color-->
+        <meta-data 
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorPrimary" />
+        
+        <!-- for Stripe payment gateway -->
+        <meta-data
+            android:name="com.stripe.android.PublicKey"
+            android:value="pk_test_51OuVimP89vVYGJSgiHDxHEhq8Zusa79GhHtCOsENCGr7y6b9MYm5ScDdYt7LmEWX0z9iwLdK0hntxUJa2K0vFqXj0088HDboA5"/>
+
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2" />
+        
+    </application>
+</manifest>
